@@ -3,25 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Site</title>
+    <title>SWIFTKicks</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Pages Site</h1>
-    <p>This is a simple webpage hosted on GitHub Pages.</p>
+
+    <nav class="side-nav">
+        <h1>Contact Me!</h1>
+        <ul>
+            <li>
+                <a href="https://www.instagram.com/khenllim/" target="_blank">
+                    <img src="Instagram_icon.png" alt="Instagram"> Instagram
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/nehk13" target="_blank">
+                    <img src="2021_Facebook_icon.svg.webp" alt="Facebook"> Facebook
+                </a>
+            </li>
+            <li>
+                <a href="mailto:khentoy445@gmail.com">
+                    <img src="gmail.png" alt="Email"> Email
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <header>
+            <h1>⚡ SWIFTKicks</h1>
+        </header>
+
+        <main class="main-container">
+            <section class="shoe-gallery">
+                <div class="shoe" onclick="openImage('530.jpeg')">
+                    <img src="530.jpeg" alt="New Balance 530">
+                    <p>New Balance 530</p>
+                    <p>₱2,799</p>
+                </div>
+                <div class="shoe" onclick="openImage('dunks.jpeg')">
+                    <img src="dunks.jpeg" alt="Nike Dunk">
+                    <p>Nike Dunk (Panda)</p>
+                    <p>₱2,499</p>
+                </div>
+                <div class="shoe" onclick="openImage('grey.jpeg')">
+                    <img src="grey.jpeg" alt="Nike Grey Fog">
+                    <p>Nike Dunk (Grey Fog)</p>
+                    <p>₱2,590</p>
+                </div>
+                <div class="shoe" onclick="openImage('af1.jpeg')">
+                    <img src="af1.jpeg" alt="Air Force 1">
+                    <p>Nike Air Force 1</p>
+                    <p>₱2,395</p>
+                </div>
+                <div class="shoe" onclick="openImage('phntm.jpeg')">
+                    <img src="phntm.jpeg" alt="Jordan Phantom">
+                    <p>Air Jordan 1 (Phantom)</p>
+                    <p>₱26,999</p>
+                </div>
+                <div class="shoe" onclick="openImage('scat.jpeg')">
+                    <img src="scat.jpeg" alt="Puma SpeedCat Black">
+                    <p>Puma SpeedCat (Black)</p>
+                    <p>₱2,399</p>
+                </div>
+                <div class="shoe" onclick="openImage('cat.jpeg')">
+                    <img src="cat.jpeg" alt="Puma SpeedCat Red">
+                    <p>Puma SpeedCat (Red)</p>
+                    <p>₱2,399</p>
+                </div>
+                <div class="shoe" onclick="openImage('rgrinch.jpeg')">
+                    <img src="rgrinch.jpeg" alt="Kobe Reverse Grinch">
+                    <p>Kobe VI (Reverse Grinch)</p>
+                    <p>₱2,599</p>
+                </div>
+                <div class="shoe" onclick="openImage('grinch.jpeg')">
+                    <img src="grinch.jpeg" alt="Kobe Grinch">
+                    <p>Kobe VI (Grinch)</p>
+                    <p>₱2,599</p>
+                </div>
+            </section>
+
+            <aside class="side-note">
+                <h2>Important Notice</h2>
+                <p>These shoes are UA (Unauthorized Authentic)</p>
+                <p><strong>Unauthorized authentic</strong> shoes are sneakers made in the same factories 
+                   with the same materials as retail versions but sold without brand authorization. 
+                   They are often identical to official releases 
+                   but bypass quality control and legal distribution channels.</p>
+            </aside>
+        </main>
+    </div>
+
+    <div id="popup" class="popup" onclick="closeImage()">
+        <span class="close" onclick="closeImage()">&times;</span>
+        <img id="popup-img" src="" alt="">
+    </div>
+
+    <script>
+        function openImage(src) {
+            document.getElementById('popup-img').src = src;
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        function closeImage() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
 </body>
 </html>
